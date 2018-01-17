@@ -2,6 +2,7 @@
 A JS file for html pages that will auto syntax highlight, and display with a typewriter animation
 
 Put <link rel="stylesheet" href="style5.css"> at the top of your html document.
+
 Put <script type="text/javascript" src="typewriter.js"></script> at the bottom of your html document.
 
 To setup the effect simply call the function setupTypewriter with 3 arguments:
