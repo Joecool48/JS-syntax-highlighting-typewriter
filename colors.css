@@ -1,0 +1,74 @@
+.yellow {
+    color: #b58900;
+}
+.orange {
+    color: #cb4b16;
+}
+.red {
+    color: #dc322f;
+}
+.magenta {
+    color: #d33682;
+}
+.violet {
+    color: #6c71c4;
+}
+.blue {
+    color: #268bd2;
+}
+.cyan {
+    color: #2aa198;
+}
+.green {
+    color: #859900;
+}
+.brblack {
+    color: #1c1c1c;
+}
+.black {
+    color: #262626;
+}
+.white {
+    color: #e4e4e4;
+}
+#typewriter{
+        font-size: 2em;
+        margin: 0;
+        font-family: "Courier New";
+        color: #e4e4e4;
+        white-space: pre-line;
+        &:after{
+            content: "|";
+            animation: blink 500ms linear infinite alternate;
+        }
+}
+.textAlign {
+    text-align: left;
+}
+#typewriter2{
+        font-size: 2em;
+        margin: 0;
+        font-family: "Courier New";
+        color: #e4e4e4;
+        &:after{
+            content: "|";
+            animation: blink 500ms linear infinite alternate;
+        }
+}
+pre {
+    background-color: #1c1c1c;
+}
+@-webkit-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
