@@ -1,4 +1,4 @@
-unction addSpan (text, element, color) {
+function addSpan (text, element, color) {
     newSpan = document.createElement ("span");
     newSpan.setAttribute ("class", color);
     console.log (newSpan);
