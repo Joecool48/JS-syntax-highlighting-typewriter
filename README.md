@@ -1,37 +1,34 @@
 # JS-syntax-highlighting-typewriter
 A JS file for html pages that will auto syntax highlight, and display with a typewriter animation
 
-Put <link rel="stylesheet" href="style5.css"> at the top of your html document.
-
 Put <script type="text/javascript" src="typewriter.js"></script> at the bottom of your html document.
 
-To setup the effect simply call the function setupTypewriter with 3 arguments:
+To setup the effect simply call the function setupTypewriter with the HTML document object as a argument.
+This is where the text will be displayed.
 
-The first is the element that has the text you want to be printed. 
+Setup the typewriter to output to the typewriter element:
 
-The second is the element where you want the text to be printed.
+var typewriter = setupTypewriter(document.getElementById("typewriter"));
 
-The third is a boolean value to indicate whether you want the program to syntax highlight or not.
+Add the input to the typewriter:
 
-Get the element that has the text you want to display, and is also the location of said text.
+typewriter.parseHtml(document.getElementById("typewriter"));
 
-var typer = document.getElementById('typewriter');
+Set the typewriter speed (Higher numbers are slower):
 
-Setup the typewriter to print the text
+typewriter.setTypeSpeed(300);
 
-typewriter = setupTypewriter(typer, typer, true);
+Sets whether the element where the text is being printed should auto scroll to the bottom:
 
-Have the typewriter start printing the text.
+typewriter.scrollLock(true);
+
+Simply clears the screen of all the text:
+
+typewriter.clearScreen();
+
+Actually starts the typing. To stop, simply call stop.
 
 typewriter.type();
 
-To change the colors and things that are highlighted, go to the top of the JS file and modify the strings containing the colors, or the 
+To change the colors and things that are highlighted, go to the top of the JS file and modify the strings containing the colors, or the
 array of strings with the keywords.
-
-The colors must be class names that are contained in the css file.
-
-To define a color for use simply use the notation:
-
-.myColor {
-  color: #rrggbb;
-}
